@@ -1,0 +1,20 @@
+\begin{thebibliography}{1}
+
+\bibitem{James2016}
+Doug~L. James.
+\newblock Physically based sound for computer animation and virtual
+  environments.
+\newblock {\em SIGGRAPH}, Jul 2016.
+
+\bibitem{Doel2001}
+Dinesh K.~Pai Kees van~den Doel, Paul G.~Kry.
+\newblock Foleyautomatic, physically-based sound effects for interactive
+  simulation and animation.
+\newblock {\em SIGGRAPH}, pages 537--544, Aug 2001.
+
+\bibitem{Brien2002}
+Christine M.~Gatchalian James F.~O'Brien, Chen~Shen.
+\newblock Synthesizing sounds from rigid-body simulations.
+\newblock {\em SIGGRAPH}, 2002.
+
+\end{thebibliography}
