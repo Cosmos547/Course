@@ -1,0 +1,152 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- common.css -->
+      <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: -apple-system, Helvetica, Arial, sans-serif;margin: 0;padding: 20px;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;height: auto;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 90%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+      <!-- ace-static.css -->
+      <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter > .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+      <style>.ace-chrome .ace_gutter {background: #ebebeb;color: #333;overflow : hidden;}.ace-chrome .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-chrome {background-color: #FFFFFF;color: black;}.ace-chrome .ace_cursor {color: black;}.ace-chrome .ace_invisible {color: rgb(191, 191, 191);}.ace-chrome .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-chrome .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-chrome .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-chrome .ace_invalid {background-color: rgb(153, 0, 0);color: white;}.ace-chrome .ace_fold {}.ace-chrome .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-chrome .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-chrome .ace_support.ace_type,.ace-chrome .ace_support.ace_class.ace-chrome .ace_support.ace_other {color: rgb(109, 121, 222);}.ace-chrome .ace_variable.ace_parameter {font-style:italic;color:#FD971F;}.ace-chrome .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-chrome .ace_comment {color: #236e24;}.ace-chrome .ace_comment.ace_doc {color: #236e24;}.ace-chrome .ace_comment.ace_doc.ace_tag {color: #236e24;}.ace-chrome .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-chrome .ace_variable {color: rgb(49, 132, 149);}.ace-chrome .ace_xml-pe {color: rgb(104, 104, 91);}.ace-chrome .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-chrome .ace_heading {color: rgb(12, 7, 255);}.ace-chrome .ace_list {color:rgb(185, 6, 144);}.ace-chrome .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-chrome .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-chrome .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-chrome .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-chrome .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-chrome .ace_gutter-active-line {background-color : #dcdcdc;}.ace-chrome .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-chrome .ace_storage,.ace-chrome .ace_keyword,.ace-chrome .ace_meta.ace_tag {color: rgb(147, 15, 128);}.ace-chrome .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-chrome .ace_string {color: #1A1AA6;}.ace-chrome .ace_entity.ace_other.ace_attribute-name {color: #994409;}.ace-chrome .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}</style>
+      <!-- export.css -->
+      <style>
+        body{margin:0 auto;max-width:800px;line-height:1.4}
+        #nav{margin:5px 0 10px;font-size:15px}
+        #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
+        #contentarea{font-size:15px;margin:16px 0}
+        .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
+        .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
+        .latex-cell{white-space:pre-wrap;}
+      </style>
+      <!-- User CSS -->
+      <style> .text-cell {font-size: 15px;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;}.latex-cell {font-size: 15px;}</style>
+    </head>
+    <body>
+      
+      <div id="titlearea">
+        <h2>P1</h2>
+      </div>
+      <div id="contentarea"><div class="cell markdown-cell"><h3>Experiment on Ruler vibration a simple harmonic model</h3>
+<p>In physics, the vibration of a ruler with one end attached to a stationary surface is experiment to obverse the basics of waves. Due to the simplicity of this experiment, I decided to simulate the sound wave generated by this.</p>
+<p>Ruler vibrating generates a simple harmonic wave that only the first few harmonics are needed. From physics experiments, the relation between the foundamentale frequency and the length of the ruler away from the surface and defined by.</p>
+<p></p><div class="MathJax_Display" role="textbox" aria-readonly="true" style="text-align: center;"><span class="MathJax" id="MathJax-Element-42-Frame" style=""><nobr><span class="math" id="MathJax-Span-293" style="width: 3.453em; display: inline-block;"><span style="display: inline-block; position: relative; width: 3.097em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.64em, 1000em, 2.91em, -0.654em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-294"><span class="mi" id="MathJax-Span-295" style="font-family: STIXGeneral-Italic;">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.146em;"></span></span><span class="mo" id="MathJax-Span-296" style="font-family: STIXGeneral-Regular; padding-left: 0.313em;">=</span><span class="mi" id="MathJax-Span-297" style="font-family: STIXGeneral-Italic; padding-left: 0.313em;">c</span><span class="msubsup" id="MathJax-Span-298"><span style="display: inline-block; position: relative; width: 0.857em; height: 0px;"><span style="position: absolute; clip: rect(1.682em, 1000em, 2.714em, -0.466em); top: -2.534em; left: 0em;"><span class="mi" id="MathJax-Span-299" style="font-family: STIXGeneral-Italic;">l<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.001em;"></span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span><span style="position: absolute; top: -2.721em; left: 0.388em;"><span class="mi" id="MathJax-Span-300" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">n</span><span style="display: inline-block; width: 0px; height: 2.309em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.159em; vertical-align: -0.292em;"></span></span></nobr></span></div><script type="math/tex; mode=display" id="MathJax-Element-42"> f = cl^n </script><p></p>
+<p>Where <span class="MathJax" id="MathJax-Element-43-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-301" style="width: 0.516em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.45em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.687em, 1000em, 2.91em, -0.654em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-302"><span class="mi" id="MathJax-Span-303" style="font-family: STIXGeneral-Italic;">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.146em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.107em; vertical-align: -0.292em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-43">f</script> is the frequency, <span class="MathJax" id="MathJax-Element-44-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-304" style="width: 0.391em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.338em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.682em, 1000em, 2.714em, -0.466em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-305"><span class="mi" id="MathJax-Span-306" style="font-family: STIXGeneral-Italic;">l<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.001em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.895em; vertical-align: -0.075em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-44">l</script> is the length and <span class="MathJax" id="MathJax-Element-45-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-307" style="width: 1.578em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.408em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.924em, 1000em, 2.844em, -0.477em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-308"><span class="mi" id="MathJax-Span-309" style="font-family: STIXGeneral-Italic;">c</span><span class="mo" id="MathJax-Span-310" style="font-family: STIXGeneral-Regular;">,</span><span class="mi" id="MathJax-Span-311" style="font-family: STIXGeneral-Italic; padding-left: 0.188em;">n</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.771em; vertical-align: -0.219em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-45">c,n</script> are constants. I decided to measure the two constants of my ruler so that I can compare the results from simulation and real sound.</p>
+<p><img src="resources/ED8CB5C689ADFB5566AA1C4A50EDD70D.jpg" alt="ruler.jpg" width="403" height="302"></p>
+<p>I used an application on my phone called <em>Spectroid</em> that gives me a real time view of the spectrum of sound. I performed different measurements at different length of the ruler.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right"><img src="resources/0303A758F96D487909335A80EC9391C6.png" alt="8cm85hz.png" width="270" height="540"></th>
+<th style="text-align:right"><img src="resources/1AD197602C225B64D78EF358566A8EA2.png" alt="10cm56hz.png" width="270" height="540"></th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">length (cm)</th>
+<th style="text-align:right">frequency (hz)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">6</td>
+<td style="text-align:right">150</td>
+</tr>
+<tr>
+<td style="text-align:right">7</td>
+<td style="text-align:right">108</td>
+</tr>
+<tr>
+<td style="text-align:right">8</td>
+<td style="text-align:right">85</td>
+</tr>
+<tr>
+<td style="text-align:right">9</td>
+<td style="text-align:right">70</td>
+</tr>
+<tr>
+<td style="text-align:right">10</td>
+<td style="text-align:right">56</td>
+</tr>
+</tbody>
+</table>
+<p>So I took 2 rows to solve the equations:</p>
+<p></p><div class="MathJax_Display" role="textbox" aria-readonly="true" style="text-align: center;"><span class="MathJax" id="MathJax-Element-46-Frame" style=""><nobr><span class="math" id="MathJax-Span-312" style="width: 6.766em; display: inline-block;"><span style="display: inline-block; position: relative; width: 6.081em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(0.608em, 1000em, 3.284em, -0.34em); top: -2.196em; left: 0em;"><span class="mrow" id="MathJax-Span-313"><span class="mtable" id="MathJax-Span-314" style="padding-right: 0.167em; padding-left: 0.167em;"><span style="display: inline-block; position: relative; width: 5.743em; height: 0px;"><span style="position: absolute; clip: rect(3.21em, 1000em, 4.885em, -0.507em); top: -3.998em; left: 0em;"><span style="display: inline-block; position: relative; width: 0em; height: 0px;"><span style="position: absolute; clip: rect(3.829em, 1000em, 4.167em, -0.507em); top: -4.616em; right: 0em;"><span class="mtd" id="MathJax-Span-315"><span class="mrow" id="MathJax-Span-316"></span></span><span style="display: inline-block; width: 0px; height: 3.998em;"></span></span><span style="position: absolute; clip: rect(3.829em, 1000em, 4.167em, -0.507em); top: -3.279em; right: 0em;"><span class="mtd" id="MathJax-Span-327"><span class="mrow" id="MathJax-Span-328"></span></span><span style="display: inline-block; width: 0px; height: 3.998em;"></span></span></span><span style="display: inline-block; width: 0px; height: 3.998em;"></span></span><span style="position: absolute; clip: rect(2.485em, 1000em, 5.062em, -0.476em); top: -3.998em; left: 0em;"><span style="display: inline-block; position: relative; width: 5.743em; height: 0px;"><span style="position: absolute; clip: rect(1.64em, 1000em, 2.88em, -0.451em); top: -3.153em; left: 0em;"><span class="mtd" id="MathJax-Span-317"><span class="mrow" id="MathJax-Span-318"><span class="mn" id="MathJax-Span-319" style="font-family: STIXGeneral-Regular;">85</span><span class="mo" id="MathJax-Span-320" style="font-family: STIXGeneral-Regular; padding-left: 0.313em;">=</span><span class="mi" id="MathJax-Span-321" style="font-family: STIXGeneral-Italic; padding-left: 0.313em;">c</span><span class="mo" id="MathJax-Span-322" style="font-family: STIXGeneral-Regular;">(</span><span class="mn" id="MathJax-Span-323" style="font-family: STIXGeneral-Regular;">0.08</span><span class="msubsup" id="MathJax-Span-324"><span style="display: inline-block; position: relative; width: 0.807em; height: 0px;"><span style="position: absolute; clip: rect(1.689em, 1000em, 2.88em, -0.478em); top: -2.534em; left: 0em;"><span class="mo" id="MathJax-Span-325" style="font-family: STIXGeneral-Regular;">)</span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span><span style="position: absolute; top: -2.721em; left: 0.338em;"><span class="mi" id="MathJax-Span-326" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">n</span><span style="display: inline-block; width: 0px; height: 2.309em;"></span></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span><span style="position: absolute; clip: rect(1.64em, 1000em, 2.88em, -0.476em); top: -1.815em; left: 0em;"><span class="mtd" id="MathJax-Span-329"><span class="mrow" id="MathJax-Span-330"><span class="mn" id="MathJax-Span-331" style="font-family: STIXGeneral-Regular;">56</span><span class="mo" id="MathJax-Span-332" style="font-family: STIXGeneral-Regular; padding-left: 0.313em;">=</span><span class="mi" id="MathJax-Span-333" style="font-family: STIXGeneral-Italic; padding-left: 0.313em;">c</span><span class="mo" id="MathJax-Span-334" style="font-family: STIXGeneral-Regular;">(</span><span class="mn" id="MathJax-Span-335" style="font-family: STIXGeneral-Regular;">0.1</span><span class="msubsup" id="MathJax-Span-336"><span style="display: inline-block; position: relative; width: 0.807em; height: 0px;"><span style="position: absolute; clip: rect(1.689em, 1000em, 2.88em, -0.478em); top: -2.534em; left: 0em;"><span class="mo" id="MathJax-Span-337" style="font-family: STIXGeneral-Regular;">)</span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span><span style="position: absolute; top: -2.721em; left: 0.338em;"><span class="mi" id="MathJax-Span-338" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">n</span><span style="display: inline-block; width: 0px; height: 2.309em;"></span></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="display: inline-block; width: 0px; height: 3.998em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.196em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 2.72em; vertical-align: -1.082em;"></span></span></nobr></span></div><script type="math/tex; mode=display" id="MathJax-Element-46">\begin{align*} & 85 = c (0.08)^n \\ & 56 = c (0.1)^n \end{align*}</script><p></p>
+<p>Solving the set of equations would give <span class="MathJax" id="MathJax-Element-47-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-339" style="width: 12.328em; display: inline-block;"><span style="display: inline-block; position: relative; width: 11.092em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.677em, 1000em, 2.844em, -0.493em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-340"><span class="mi" id="MathJax-Span-341" style="font-family: STIXGeneral-Italic;">n</span><span class="mo" id="MathJax-Span-342" style="font-family: STIXGeneral-Regular; padding-left: 0.313em;">=</span><span class="mo" id="MathJax-Span-343" style="font-family: STIXGeneral-Regular; padding-left: 0.313em;">−</span><span class="mn" id="MathJax-Span-344" style="font-family: STIXGeneral-Regular;">187009</span><span class="mo" id="MathJax-Span-345" style="font-family: STIXGeneral-Regular;">,</span><span class="mi" id="MathJax-Span-346" style="font-family: STIXGeneral-Italic; padding-left: 0.188em;">c</span><span class="mo" id="MathJax-Span-347" style="font-family: STIXGeneral-Regular; padding-left: 0.313em;">=</span><span class="mn" id="MathJax-Span-348" style="font-family: STIXGeneral-Regular; padding-left: 0.313em;">0.75526</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.045em; vertical-align: -0.219em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-47">n = -187009, c = 0.75526</script></p>
+<p>Then I looked at the specturm of length 8 cm with <em>Audacity</em> to get the level of sound intensity at each harmonic and took the first 4 harmonics's sound intensity to have a rough model for the simulation.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">harmonic</th>
+<th style="text-align:right">intensity (db)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td style="text-align:right">-29</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td style="text-align:right">-54</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td style="text-align:right">-60</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td style="text-align:right">-63</td>
+</tr>
+</tbody>
+</table>
+<p>I fit this meassurement with exponiental function by <code>scipy.optimize</code> and achieved a rough function.</p>
+<p></p><div class="MathJax_Display" role="textbox" aria-readonly="true" style="text-align: center;"><span class="MathJax" id="MathJax-Element-48-Frame" style=""><nobr><span class="math" id="MathJax-Span-349" style="width: 7.453em; display: inline-block;"><span style="display: inline-block; position: relative; width: 6.7em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.468em, 1000em, 2.717em, -0.483em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-350"><span class="mn" id="MathJax-Span-351" style="font-family: STIXGeneral-Regular;">0.24606</span><span class="msubsup" id="MathJax-Span-352"><span style="display: inline-block; position: relative; width: 3.397em; height: 0px;"><span style="position: absolute; clip: rect(1.924em, 1000em, 2.714em, -0.476em); top: -2.534em; left: 0em;"><span class="mi" id="MathJax-Span-353" style="font-family: STIXGeneral-Italic;">e</span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span><span style="position: absolute; top: -2.721em; left: 0.45em;"><span class="texatom" id="MathJax-Span-354"><span class="mrow" id="MathJax-Span-355"><span class="mo" id="MathJax-Span-356" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">−</span><span class="mn" id="MathJax-Span-357" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">1.9368</span><span class="mi" id="MathJax-Span-358" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">k<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.012em;"></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.309em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.136em; vertical-align: -0.078em;"></span></span></nobr></span></div><script type="math/tex; mode=display" id="MathJax-Element-48"> 0.24606e^{-1.9368k}</script><p></p>
+<p>Where <span class="MathJax" id="MathJax-Element-49-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-359" style="width: 0.578em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.507em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.682em, 1000em, 2.714em, -0.493em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-360"><span class="mi" id="MathJax-Span-361" style="font-family: STIXGeneral-Italic;">k<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.017em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.895em; vertical-align: -0.075em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-49">k</script> is the harmonic number.</p>
+<p>From observation of the spectrum, the sound intensity have a linear decay over logrithm function. However, at higher frequencies is have some unusual behavior. My assumption is that it's the noise from the fact that I can't keep the ruler 100% stable at the table so there are some noises created by that. Also, there are sound when my fingers are leaving the ruler.</p>
+<h4>Creating a simulation prototype</h4>
+<h5>Setting up the simulation environment</h5>
+<p>Now I need to create a simulation to show that I can generate a sound base on the previous experiment. Also, I need to explore softwares that can have sound control at a lower level.</p>
+<p>After some research online here are the tools I used for the ruler simulation and hopefully it still serves great for the final project.</p>
+<p>Software used:</p>
+<ul>
+<li><a href="https://www.python.org/">Python 3</a><br>
+Python is a simple high level programming language with great extensions. I choose python because I'm familiar with it and python can be installed on every system extremely easy.</li>
+<li><a href="https://python-sounddevice.readthedocs.io/en/0.3.10/#">sounddevice</a><br>
+A python sound package that can directly play numpy arrays and have very low level control of sound streams</li>
+<li><a href="http://www.numpy.org/">numpy</a><br>
+Scientific computing toolkit.</li>
+<li><a href="https://www.scipy.org/">scipy</a><br>
+Scientific computing toolkit</li>
+<li><a href="https://bitbucket.org/pyglet/pyglet/wiki/Home">pyglet</a><br>
+Great simple python multimedia library.</li>
+</ul>
+<p>All the packages can be simply installed with <code>pip</code>. <code>pip3 install numpy scipy pyglet sounddevice</code></p>
+<h5>Setting up the sound pipline</h5>
+<p>I created a function that would produce a sound array based on 2 values, the length of the ruler and the "force" applied. The "force" is a simple parameter that changes the sound level.</p>
+<p>Inorder to have a sound playing and can add more sound simutaneously, I discovered that <code>sounddevice</code> have low level sound interface to have streams of sound directly modified. So by creating a stream with each interaction that would create a sound, I can have them independently controlled. This hopefully will elimiate problems about sound modification problem in the future.</p>
+<h5>Some failure attempts</h5>
+<h6>Sound updating base on timesteps</h6>
+<p>At first I have a thought that I can have all the sound arrays stored. Then at a fixed time step <span class="MathJax" id="MathJax-Element-50-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-362" style="width: 0.953em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.845em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.682em, 1000em, 2.716em, -0.492em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-363"><span class="mi" id="MathJax-Span-364" style="font-family: STIXGeneral-Italic;">d<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.027em;"></span></span><span class="mi" id="MathJax-Span-365" style="font-family: STIXGeneral-Italic;">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.018em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.898em; vertical-align: -0.077em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-50">dt</script> I would update the stream so it could play the sound for the next time step. However, later I discovered when doing so, I have no control on the accuracy of the time steps. So as a result I would get discontinued sound, which is super bad.</p>
+<h6>Use high level audio playback function calls</h6>
+<p>At first, I called audio play functions with threading. However, that creates some interesting problems that I think might be system specific. The second audio played would be overwrite the first audio played. It seems to me that the function call access a single audio interface on system level and would simply overwrite it. It might also be due to the package I'm using but it's good to put a note here.</p>
+<h4>The simulation</h4>
+<p>The file <code>p1.py</code> opens a blacked screen window with fps displayed on the bottom left. When clicking in the window a sound will be played based on the location clicked.</p>
+<ul>
+<li>Ruler length: 5cm at left and 12 cm at right.</li>
+<li>Sound level: 0.2 at bottom and 1.2 at top.</li>
+</ul>
+<p>For example, clicking at top right cornor will generate a simulated sound from a ruler 12 cm away from table with high sound level and at bottom right cornor will generate a simulated sound from a ruler 5 cm away from table with low sound level.</p>
+<p>To quit the simulation press <code>esc</code>.</p>
+<h5>Observations of simulation result</h5>
+<p>At longer ruler length, the sound sounds very legit. However, at shorter ruler length, the sound does not sound right. My guess is that in real life, at shorter length, it's very hard to have the ruler proper bent and produce a simple harmonic motion. Also, as discuss before, it's very hard to eliminate the noise created by can't have one end of the ruler exactly stationary.</p>
+<h4>Summary</h4>
+<p>Currently I have a working simulation system with every part tested. (There's no graphics for the current simulation due to it's not important in my oppinion. But I've used <code>pyglet</code> to create other simulations in the past, so I have that part covered) To complete the final project, I need to figure out how to apply the equations from the papers to real world materials so I can model the sound generation of ball colliding and ball plate colliding.</p>
+</div></div>
+      <script></script>
+    </body>
+    </html>
+  

@@ -1,0 +1,1 @@
+p1_markdown and p1_html contains the same thing. p1_html is for easy accessible since everyone have a browser on their computer now. There are no different between the 2 as the html is generated from the markdown file.

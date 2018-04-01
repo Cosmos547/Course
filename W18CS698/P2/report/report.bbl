@@ -1,0 +1,62 @@
+\begin{thebibliography}{10}
+
+\bibitem{Cook7}
+P.~R. Cook.
+\newblock Integration of physial modeling for synthesis and animation.
+\newblock {\em Proceedings of the International Computer Music Conference},
+  pages 525--528, 1995.
+
+\bibitem{Doel1996}
+Dinesh K.~Pai Kees van~den Doel.
+\newblock Synthesis of shape dependent sounds with physical modeling.
+\newblock {\em Proceedings of the Ineternational Conference on Auditory
+  Display}, 1996.
+
+\bibitem{Doel1998}
+Dinesh K.~Pai Kees van~den Doel.
+\newblock The sounds of physical shapes.
+\newblock {\em Presence 7}, 1998.
+
+\bibitem{Brien2002}
+Christine M.~Gatchalian James F.~O'Brien, Chen~Shen.
+\newblock Synthesizing sounds from rigid-body simulations.
+\newblock {\em SIGGRAPH}, 2002.
+
+\bibitem{python}
+Python.
+\newblock \url{https://www.python.org/}.
+
+\bibitem{sd}
+sounddevice.
+\newblock \url{https:://python-sounddevice.readthedocs.io/en/0.3.10/}.
+
+\bibitem{pyglet}
+pyglet.
+\newblock \url{https://bitbucket.org/pyglet/pyglet/wiki/Home}.
+
+\bibitem{np}
+numpy.
+\newblock \url{http://www.numpy.org/}.
+
+\bibitem{scipy}
+scipy.
+\newblock \url{https://www.scipy.org/}.
+
+\bibitem{Lin2013}
+Ming C.~Lin Zhimin~Ren, Hengchin~Yeh.
+\newblock Example-guided physically based modal sound synthesis.
+\newblock {\em SIGGRAPH}, 2013.
+
+\bibitem{Chadwick12}
+Jeffrey~N. Chadwick, Changxi Zheng, and Doug~L. James.
+\newblock Precomputed acceleration noise for improved rigid-body sound.
+\newblock {\em ACM Transactions on Graphics (Proceedings of SIGGRAPH 2012)},
+  31(4), August 2012.
+
+\bibitem{James2006}
+Dinesh K.~Pai Doug L.~James, Jernej~Barbic.
+\newblock Precomputed acoustic transfer: Output-sensitive, accurate sound
+  generation for geometrically complex vibration sources.
+\newblock {\em SIGGRAPH}, 2006.
+
+\end{thebibliography}
