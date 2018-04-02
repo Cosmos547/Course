@@ -14,38 +14,10 @@ sd.default.samplerate = 44100
 mouse_x = 0
 mouse_y = 0
 
-frequencies = bar(1000)
+frequencies = bar(500)
 rfreq = [16,150,440,1100,7902]
 
 fps_display = clock.ClockDisplay()
-
-def generateSound(x, amp):
-    stream = sd.OutputStream(dtype=np.int16, channels=2)
-    stream.start()
-    time = 1.0
-    f0 = 0.75526*(x**(-1.87009))
-    samples = np.arange(44100*1*time)/44100.0
-    wave = 0
-    y = [0.03548, 0.0024953, 0.001, 0.000708]
-    for i in range(4):
-        wave += 281849 * amp * y[i] * np.sin(2*np.pi*f0*samples)
-    for i in range(len(wave)):
-        wave[i] *= np.exp(-3.0*(i/44100))
-
-    wav_wave = np.array(wave, dtype=np.int16)
-    stream.write(wav_wave)
-    stream.close()
-
-    return wav_wave
-    # Thread(target=sd.play, args=(wav_wave,)).start()
-    # sd.play(stream)
-
-    # samples = np.arange(44100*time)/44100.0
-    # wave = 10000 * np.sin(2*np.pi*2*f0*samples)
-    # wav_wave = np.array(wave, dtype=np.int16)
-    # stream.write(wav_wave)
-    # sd.play(wav_wave)
-    # Thread(target=sd.play, args=(wav_wave,)).start()
 
 @window.event
 def on_mouse_press(x, y, button, modifiers):
@@ -65,7 +37,7 @@ def on_mouse_press(x, y, button, modifiers):
     hit_x = (mouse_x - 100.0)/440.0
     for i in range(4):
         if (mouse_y > 71+100*i and mouse_y < 111+100*i and hit_x < 1.0 and hit_x > 0.0):
-            Thread(target=easy_sound, args=(rfreq[i], hit_x, 3, frequencies)).start()
+            Thread(target=easy_sound, args=(rfreq[i], hit_x, 1, frequencies)).start()
     
     # print("Playing at " + str(w) + " meters away with " + str(s) + " of force")
 
