@@ -4,45 +4,45 @@ The top-level auxiliary file: report.aux
 The style file: alpha.bst
 Database file #1: sample.bib
 Warning--empty journal in LaValle1998
-You've used 2 entries,
+You've used 3 entries,
             2543 wiz_defined-function locations,
-            572 strings with 4768 characters,
-and the built_in function-call counts, 776 in all, are:
-= -- 72
-> -- 39
-< -- 1
-+ -- 14
-- -- 14
-* -- 60
-:= -- 142
-add.period$ -- 6
-call.type$ -- 2
-change.case$ -- 13
-chr.to.int$ -- 2
-cite$ -- 3
-duplicate$ -- 28
-empty$ -- 51
-format.name$ -- 17
-if$ -- 148
+            578 strings with 4919 characters,
+and the built_in function-call counts, 1041 in all, are:
+= -- 98
+> -- 47
+< -- 2
++ -- 16
+- -- 16
+* -- 75
+:= -- 190
+add.period$ -- 9
+call.type$ -- 3
+change.case$ -- 18
+chr.to.int$ -- 3
+cite$ -- 4
+duplicate$ -- 42
+empty$ -- 71
+format.name$ -- 20
+if$ -- 200
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 2
-newline$ -- 13
-num.names$ -- 6
-pop$ -- 12
+missing$ -- 3
+newline$ -- 18
+num.names$ -- 9
+pop$ -- 16
 preamble$ -- 1
-purify$ -- 15
+purify$ -- 21
 quote$ -- 0
-skip$ -- 23
+skip$ -- 34
 stack$ -- 0
-substring$ -- 35
-swap$ -- 1
-text.length$ -- 1
+substring$ -- 42
+swap$ -- 2
+text.length$ -- 2
 text.prefix$ -- 1
 top$ -- 0
-type$ -- 16
+type$ -- 24
 warning$ -- 1
-while$ -- 6
-width$ -- 4
-write$ -- 26
+while$ -- 8
+width$ -- 6
+write$ -- 38
 (There was 1 warning)

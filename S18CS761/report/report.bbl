@@ -12,4 +12,9 @@ Steven~M. LaValle.
 \newblock Rapidly-exploring random trees: A new tool for path planning.
 \newblock 1998.
 
+\bibitem[SK10]{Karaman2010}
+Emilio~Frazzoli Sertac~Karaman.
+\newblock Incremental sampling-based algorithms for optimal motion planning.
+\newblock {\em Robotics: Science and Systems}, June 2010.
+
 \end{thebibliography}
