@@ -175,6 +175,10 @@ Sample code to measure evolution of LOC (Lines of Code) in a MSR study
 ```bash
 RAWDATA = load ’ $inputdata ’ using ExtPigStorage () 
     as ( filename : chararray , filecontent : chararray ) ;
+
+```
+
+```bash
 HISTORYLOG = foreach RAWDATA generate ExtractLog ( filename , filecontent ) ;
 HISTORYVERSIONS = foreach HISTORYLOG generate
 ExtractVersions ( $0 ) ;
@@ -187,13 +191,30 @@ dump LOC ;
 
 ---
 
+```bash
+RAWDATA = load ’ $inputdata ’ using ExtPigStorage () 
+    as ( filename : chararray , filecontent : chararray ) ;
+HISTORYLOG = foreach RAWDATA generate ExtractLog ( filename , filecontent ) ;
+HISTORYVERSIONS = foreach HISTORYLOG generate
+ExtractVersions ( $0 ) ;
+CODE = foreach HISTORYVERSIONS generate
+ExtractSourceCode ( $0 ) ;
+LOC = foreach CODE generate GenLOC ( $0 ) ;
+dump LOC ;
+
+```
+
+<pre> <code class="bash hljs remark-code"> test <b>bold</b> test </code></pre>
+
+---
+
 # Comparison to Hadoop
 
 1. High level
 
 1. Running Time
 
-2. Migration LOC
+2. Migration LOC (from where)
 
 3. Modularity
 
