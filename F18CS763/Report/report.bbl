@@ -1,0 +1,46 @@
+\begin{thebibliography}{1}
+
+\bibitem{barequet04}
+Aya Levi-Steiner Dvir~Steiner Gill~Barequet, Michael T.~Goodrich.
+\newblock Contour interpolation by straight skeletons.
+\newblock {\em Graphical Models}, 2004.
+
+\bibitem{oliva96}
+S.~Coquillart J-M.~Oliva, M.~Perrin.
+\newblock 3d reconstruction of complex polyhedral shapes from contours using a
+  simplified generalized voronoi diagram.
+\newblock {\em EUROGRAPHICS}, 1996.
+
+\bibitem{meyers91}
+D.~Meyers, S.~Skinner, and K.~Sloan.
+\newblock Surfaces from contours: The correspondence and branching problems.
+\newblock In {\em Proceedings of Graphics Interface '91}, GI '91, pages
+  246--254, Toronto, Ontario, Canada, 1991. Canadian Man-Computer
+  Communications Society.
+
+\bibitem{cgaa}
+Mark Overmars Otfried~Schwarzkopf Mark~de Berg, Marc van~Kreveld.
+\newblock {\em Computational Geometry Algorithms and Applications}.
+\newblock 1997.
+
+\bibitem{barequet08}
+Amir~Vaxman Gill~Barequet.
+\newblock Nonlinear interpolation between slices.
+\newblock {\em International Journal of Shape Modeling}, pages 39--60, 2008.
+
+\bibitem{bermano11}
+Amit Bermano, Amir Vaxman, and Craig Gotsman.
+\newblock Online reconstruction of 3d objects from arbitrary cross-sections.
+\newblock {\em ACM Trans. Graph.}, 30(5):113:1--113:11, October 2011.
+
+\bibitem{kazhdan06}
+Hugues~Hoppe Michael~Kazhdan, Matthew~Bolitho.
+\newblock Poisson surface reconstruction.
+\newblock {\em Eurographics Symposium on Geometry Processing}, 2006.
+
+\bibitem{kazhdan13}
+Hugues~Hoppe Michael~Kazhdan.
+\newblock Screened poisson surface reconstruction.
+\newblock {\em ACM Transactions on Graphics}, 2013.
+
+\end{thebibliography}

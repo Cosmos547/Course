@@ -8,6 +8,6 @@ This paper discussed a way of identifying the origin of a program based on an in
 
 - The results seems to imply that between versions of software, many OOIs are modified. So what is a version change in general. Is it a convention or they are just per person.
 
-- What causes the difference between decomplied and source code? I'm not very familiar on this topic.
+- What causes the difference between decompiled and source code? I'm not very familiar on this topic.
 
 - Malware detection potential? Since binary to binary seems to have a great precision it would detect differences between original file.

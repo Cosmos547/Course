@@ -1,7 +1,6 @@
 \documentclass[12pt]{article}
 
-\usepackage[margin=1in]{geometry}
-\geometry{lettersize}
+\usepackage[letterpaper,margin=1in]{geometry}
 
 \usepackage{graphicx}
 \usepackage{float}
@@ -14,7 +13,7 @@
 
 \renewcommand{\maketitle}{
     \begin{flushright}
-        {\LARGE \textbf{Randomization in Path Planning}}
+        {\LARGE \textbf{CS761: Randomization in Path Planning}}
 
 
     {\large \textsc{Wenhan Zhu (Cosmos)} \\ \textit{University of Waterloo}}
@@ -43,13 +42,13 @@ Both PRM and RRT are introduced in the late 90s to solve the problem of having a
     \includegraphics[width=.6\linewidth]{prm-example.png}
     \caption{PRM example (Source: Wiki)}
     \label{fig:prm}
-\end{minipage}%
+\end{subfigure}%
 \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=.6\linewidth]{rrt-example.png}
     \caption{RRT example (Source: Wiki)}
     \label{fig:rrt}
-\end{minipage}
+\end{subfigure}
 \caption{PRM and RRT example}
 \end{figure}
 
