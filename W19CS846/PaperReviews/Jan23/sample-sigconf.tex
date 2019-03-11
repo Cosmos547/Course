@@ -1,0 +1,127 @@
+%
+% The first command in your LaTeX source must be the \documentclass command.
+\documentclass[sigconf]{acmart}
+
+% Disable the extra information at the foot at first page for better viewing experience for a normal document.
+\settopmatter{printacmref=false} % Removes citation information below abstract
+\renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference information in first column
+\pagestyle{plain} % removes running headers
+
+%
+% defining the \BibTeX command - from Oren Patashnik's original BibTeX documentation.
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08emT\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+    
+% Rights management information. 
+% This information is sent to you when you complete the rights form.
+% These commands have SAMPLE values in them; it is your responsibility as an author to replace
+% the commands and values with those provided to you when you complete the rights form.
+%
+% These commands are for a PROCEEDINGS abstract or paper.
+%\copyrightyear{2018}
+%\acmYear{2018}
+%\setcopyright{acmlicensed}
+%\acmConference[Woodstock '18]{Woodstock '18: ACM Symposium on Neural Gaze Detection}{June 03--05, 2018}{Woodstock, NY}
+%\acmBooktitle{Woodstock '18: ACM Symposium on Neural Gaze Detection, June 03--05, 2018, Woodstock, NY}
+%\acmPrice{15.00}
+%\acmDOI{10.1145/1122445.1122456}
+%\acmISBN{978-1-4503-9999-9/18/06}
+
+%
+% These commands are for a JOURNAL article.
+%\setcopyright{acmcopyright}
+%\acmJournal{TOG}
+%\acmYear{2018}\acmVolume{37}\acmNumber{4}\acmArticle{111}\acmMonth{8}
+%\acmDOI{10.1145/1122445.1122456}
+
+%
+% Submission ID. 
+% Use this when submitting an article to a sponsored event. You'll receive a unique submission ID from the organizers
+% of the event, and this ID should be used as the parameter to this command.
+%\acmSubmissionID{123-A56-BU3}
+
+%
+% The majority of ACM publications use numbered citations and references. If you are preparing content for an event
+% sponsored by ACM SIGGRAPH, you must use the "author year" style of citations and references. Uncommenting
+% the next command will enable that style.
+%\citestyle{acmauthoryear}
+
+%
+% end of the preamble, start of the body of the document source.
+%\setcopyright{none}
+\begin{document}
+
+%
+% The "title" command has an optional parameter, allowing the author to define a "short title" to be used in page headers.
+\title{Paper Review CS846, Jan. 23\\
+    Interviews and Cowboys, Ankle Sprains, and Keepers of Quality: How is Videa Game Development Different from Software Development
+}
+
+%
+% The "author" command and its associated commands are used to define the authors and their affiliations.
+% Of note is the shared affiliation of the first two authors, and the "authornote" and "authornotemark" commands
+% used to denote shared contribution to the research.
+\author{Wenhan Zhu (Cosmos)}
+\email{w65zhu@uwaterloo.ca}
+\affiliation{%
+  \institution{University of Waterloo}
+  \city{Waterloo}
+  \country{Canada}
+}
+
+%
+% The abstract is a short summary of the work to be presented in the article.
+\begin{abstract}
+    This week's paper reviewed here are {\bf Interviews} by {\it Chirstian Bird} and {\bf Cowboys, Ankle Sprains, and Keepers of Quality: How is Video Game Development Different from Software Development?} by {\it Emerson Murphy-Hill, Thomas Zimmermann and Nachiappan Nagappan}.
+
+    {\it Bird} talked about his experience working at {\it Microsoft} and how interviews helped him understand what was going on for the {\it Bing} team at {\it Microsoft} which have code reviews that was approved in minutes. 
+
+    {\it Murphy-Hill et al.} wants to understand the difference between software development in general and game development. They interviewed people that have worked in both fields and did an analysis on the results to see what the differences are between general software development and game development.
+\end{abstract}
+
+%
+% Keywords. The author(s) should pick words that accurately describe the work being
+% presented. Separate the keywords with commas.
+\keywords{paper review}
+
+%
+% A "teaser" image appears between the author and affiliation information and the body 
+% of the document, and typically spans the page. 
+%\begin{teaserfigure}
+  %\includegraphics[width=\textwidth]{sampleteaser}
+  %\caption{Seattle Mariners at Spring Training, 2010.}
+  %\Description{Enjoying the baseball game from the third-base seats. Ichiro Suzuki preparing to bat.}
+  %\label{fig:teaser}
+%\end{teaserfigure}
+
+%
+% This command processes the author and affiliation and title information and builds
+% the first part of the formatted document.
+\maketitle
+
+\section{Summary}
+
+{\it Bird}'s chapter focuses on why interview is important and what interview gives over simply looking at data. A interview can reveal what actually happens in real world which sometimes would create data that looks strange by just looking at the data. He also gave some suggestions on how to give a good interview and how to select the people to interview. When selecting an interviewer it's important to not waste time on interviewing the wrong person. In some situations, when the goal of the interview is clear, it's best to interview the people that are extremes so that more data can be gathered from the interview. Meanwhile when the goal of the interview is not that clear and we are not sure who to interview, a good way is to keep tract of each interview and keep interviewing people until we have reached a state where a new interviewee does not introduce any new information in this situation. The author gave suggestions to how to ask the person you would like to interview. When contacting the person you would want to tell them who you are, what are you doing, how they are selected and what this interview for. This would give a good information for the person. A good way to prepare for an interview is to have an one page interview guide which contains the questions that you would like to ask the interviewee. Then keep the guide in mind and cross out questions that has been answers also it serve as a way to always keep the interview on track so that the interview won't drift too far away. However, the guide is only a guide when an interesting topic came up during the interview, it's best to dig deeper when needed. And the one page of interview guide would not be too long so that you will be kept going over the interview to see what's going on. Another good point during the interview is to have exactly 2 person. One person would be hard to take notes and keep eye contact and more people will create the feeling of too overwhelmed for the interviewee. The role of the 2 person is one to keep eye contact with the person and keep the conversation going, the other take notes. Both the person can ask questions when they feel to do so. Also, it's suggested to record the audio and also take notes. Experience from the author suggests that looking at notes is a way better way to go through what is talked about during the interview and audio recordings are not good when we need a short piece of information. And it is best to have a discussion right after the interview so that the interview is still fresh in mind and have key points mentioned for the 2 person. 
+
+{\it Murphy-Hill et al.} proposed a question on the difference between software engineering in general and game development in the industry. Game development is a larger process than just software engineering, it's a combination of art design, game design, software engineering and much more. The has been very few study of game development from the view point of software engineering. The authors decided to interview people from {\it Microsoft Office} team and people who have worked for 2 years in gaming and 2 years in software engineering in the past 10 years around the Seattle region. The authors applied the technique of interviewing by keep interview new people until there are no new information.
+
+The interview confirms some anecdotal information about game development. Testing is not a concern in gaming compared to traditional software engineering. The interviewees said that testing normally done by human testers and only care about the results. Unit tests are almost never conducted in gaming development and a lot of "hacking" is done to get things working. Also since game development is a rapidly changing phase and the requirement is too abstract, "being fun" it makes it hard to create tests and requirements. Also a huge portion of programming in gaming is testing settings of games, where parameters needs to be changed often and would create different results which adds more layer of frustration for hacking. During the interview, the authors also found out that in game development, managers that have a technical background is very rare. So software programmers in game development often needs to explain the process of software engineering to their managers and practices of software development often come from the software engineers. It has also been noticed that there are a lot of in-house tools designed for game development. It turns out that because of the specifics of games are dramatically different from each other and it often involves using assets from different sources many tool are very specific and therefore needs to be specifically designed. And unlike software products in general. Often, after a game is released, the code of the game is rarely changed. Which makes maintaining the code over long time a none-issue.
+
+\section{Thoughts}
+
+{\it Murphy-Hill et al.} is a specific interview research on gaming development. It uses many ideas from the chapter on interview. I think the process really illustrates what interview are and how to conduct a good and interesting interview. 
+
+I think the idea of game development is very interesting in this sense. Game programming require a lot of graphics programming. Which involves displaying on the screen with a desired image. Often it is very hard to notice what goes wrong since only the result image will a representation of the programming. Debugging is also hard in graphic programming often times. Since unlike the CPU which is very stable, graphics drivers are problematic and often can contain errors during the rendering process. And a lot of the programming on the graphics side is extremely to debug. Which creates an extra layer of frustration in many situations. In fact, one of the practices in programming shaders is to display a different color on the entire screen to serve as break points to know at which stage of the code things went wrong. Also the interactiveness of many gaming development makes it impossible to explore the entire game state for debugging. And also, what I personally find frustrating in gaming now is the push for monetization large companies want which makes a lot of games being rushed and unpolished.
+
+It seems like being at {\it Microsoft} really gave the authors of the paper the opportunity to do the work. They had the resources that is very hard for a researcher to gather and the scale and availability of {\it Microsoft} workers really bring insight to the problem. 
+
+
+% Ratings are out of 5
+\section{Ratings}
+I would rank the chapter {\bf Interviews} 5/5. It gave an excellent example on why interview is important and gave advice on how to conduct an interview at every stage.
+
+I would rank the paper 4/5. I don't feel like only interviews would tell the entire story of game development and software engineering. Although, the interview did show many interesting points, however, it could be biased.
+
+\section{Questions}
+The paper is done by people at {\it Microsoft} and in the paper they are heavily biased towards worker in {\it Microsoft} to create the comparison data for the results. To me it would seem that only considering people from {\it Microsoft} in these comparisons is a huge bias. So is it a good sample?
+
+\end{document}
