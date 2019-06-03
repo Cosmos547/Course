@@ -1,0 +1,236 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{11}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[\protect\citeauthoryear{Baltes and Diehl}{Baltes and Diehl}{2018}]%
+        {Baltes2018}
+\bibfield{author}{\bibinfo{person}{Sebastian Baltes} {and}
+  \bibinfo{person}{Stephan Diehl}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Usage and attribution of Stack Overflow code
+  snippets in GitHub projects}.
+\newblock \bibinfo{journal}{\emph{Empirical Software Engineering}}
+  (\bibinfo{date}{01 Oct} \bibinfo{year}{2018}).
+\newblock
+\showISSN{1573-7616}
+\urldef\tempurl%
+\url{https://doi.org/10.1007/s10664-018-9650-5}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Baltes, Dumani, Treude, and Diehl}{Baltes
+  et~al\mbox{.}}{2018}]%
+        {Baltes:2018:SRA:3196398.3196430}
+\bibfield{author}{\bibinfo{person}{Sebastian Baltes}, \bibinfo{person}{Lorik
+  Dumani}, \bibinfo{person}{Christoph Treude}, {and} \bibinfo{person}{Stephan
+  Diehl}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{SOTorrent: Reconstructing and Analyzing the
+  Evolution of Stack Overflow Posts}. In \bibinfo{booktitle}{\emph{Proceedings
+  of the 15th International Conference on Mining Software Repositories}}
+  \emph{(\bibinfo{series}{MSR '18})}. \bibinfo{publisher}{ACM},
+  \bibinfo{address}{New York, NY, USA}, \bibinfo{pages}{319--330}.
+\newblock
+\showISBNx{978-1-4503-5716-6}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3196398.3196430}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Barua, Thomas, and Hassan}{Barua
+  et~al\mbox{.}}{2014}]%
+        {Barua2014}
+\bibfield{author}{\bibinfo{person}{Anton Barua}, \bibinfo{person}{Stephen~W.
+  Thomas}, {and} \bibinfo{person}{Ahmed~E. Hassan}.}
+  \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{What are developers talking about? An analysis of
+  topics and trends in Stack Overflow}.
+\newblock \bibinfo{journal}{\emph{Empirical Software Engineering}}
+  \bibinfo{volume}{19}, \bibinfo{number}{3} (\bibinfo{date}{01 Jun}
+  \bibinfo{year}{2014}), \bibinfo{pages}{619--654}.
+\newblock
+\showISSN{1573-7616}
+\urldef\tempurl%
+\url{https://doi.org/10.1007/s10664-012-9231-y}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Cavusoglu, Li, and Huang}{Cavusoglu
+  et~al\mbox{.}}{2015}]%
+        {Cavusoglu:2015:GMV:2685553.2698999}
+\bibfield{author}{\bibinfo{person}{Huseyin Cavusoglu}, \bibinfo{person}{Zhuolun
+  Li}, {and} \bibinfo{person}{Ke-Wei Huang}.} \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{Can Gamification Motivate Voluntary Contributions?:
+  The Case of StackOverflow Q\&\#38;A Community}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 18th ACM Conference Companion on
+  Computer Supported Cooperative Work \&\#38; Social Computing}}
+  \emph{(\bibinfo{series}{CSCW'15 Companion})}. \bibinfo{publisher}{ACM},
+  \bibinfo{address}{New York, NY, USA}, \bibinfo{pages}{171--174}.
+\newblock
+\showISBNx{978-1-4503-2946-0}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/2685553.2698999}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Duijn, Ku\v{c}era, and Bacchelli}{Duijn
+  et~al\mbox{.}}{2015}]%
+        {Duijn:2015:QQN:2820518.2820574}
+\bibfield{author}{\bibinfo{person}{Maarten Duijn}, \bibinfo{person}{Adam
+  Ku\v{c}era}, {and} \bibinfo{person}{Alberto Bacchelli}.}
+  \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{Quality Questions Need Quality Code: Classifying
+  Code Fragments on Stack Overflow}. In \bibinfo{booktitle}{\emph{Proceedings
+  of the 12th Working Conference on Mining Software Repositories}}
+  \emph{(\bibinfo{series}{MSR '15})}. \bibinfo{publisher}{IEEE Press},
+  \bibinfo{address}{Piscataway, NJ, USA}, \bibinfo{pages}{410--413}.
+\newblock
+\showISBNx{978-0-7695-5594-2}
+\urldef\tempurl%
+\url{http://dl.acm.org/citation.cfm?id=2820518.2820574}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{{Fischer}, {Böttinger}, {Xiao}, {Stransky},
+  {Acar}, {Backes}, and {Fahl}}{{Fischer} et~al\mbox{.}}{2017}]%
+        {7958574}
+\bibfield{author}{\bibinfo{person}{F. {Fischer}}, \bibinfo{person}{K.
+  {Böttinger}}, \bibinfo{person}{H. {Xiao}}, \bibinfo{person}{C. {Stransky}},
+  \bibinfo{person}{Y. {Acar}}, \bibinfo{person}{M. {Backes}}, {and}
+  \bibinfo{person}{S. {Fahl}}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Stack Overflow Considered Harmful? The Impact of
+  Copy amp;Paste on Android Application Security}. In
+  \bibinfo{booktitle}{\emph{2017 IEEE Symposium on Security and Privacy (SP)}}.
+  \bibinfo{pages}{121--136}.
+\newblock
+\showISSN{2375-1207}
+\urldef\tempurl%
+\url{https://doi.org/10.1109/SP.2017.31}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Ponzanelli, Bavota, Di~Penta, Oliveto, and
+  Lanza}{Ponzanelli et~al\mbox{.}}{2014}]%
+        {Ponzanelli:2014:MST:2597073.2597077}
+\bibfield{author}{\bibinfo{person}{Luca Ponzanelli}, \bibinfo{person}{Gabriele
+  Bavota}, \bibinfo{person}{Massimiliano Di~Penta}, \bibinfo{person}{Rocco
+  Oliveto}, {and} \bibinfo{person}{Michele Lanza}.}
+  \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{Mining StackOverflow to Turn the IDE into a
+  Self-confident Programming Prompter}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 11th Working Conference on
+  Mining Software Repositories}} \emph{(\bibinfo{series}{MSR 2014})}.
+  \bibinfo{publisher}{ACM}, \bibinfo{address}{New York, NY, USA},
+  \bibinfo{pages}{102--111}.
+\newblock
+\showISBNx{978-1-4503-2863-0}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/2597073.2597077}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Saha, Saha, and Schneider}{Saha
+  et~al\mbox{.}}{2013}]%
+        {Saha:2013:DMA:2487085.2487103}
+\bibfield{author}{\bibinfo{person}{Avigit~K. Saha}, \bibinfo{person}{Ripon~K.
+  Saha}, {and} \bibinfo{person}{Kevin~A. Schneider}.}
+  \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{A Discriminative Model Approach for Suggesting Tags
+  Automatically for Stack Overflow Questions}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 10th Working Conference on
+  Mining Software Repositories}} \emph{(\bibinfo{series}{MSR '13})}.
+  \bibinfo{publisher}{IEEE Press}, \bibinfo{address}{Piscataway, NJ, USA},
+  \bibinfo{pages}{73--76}.
+\newblock
+\showISBNx{978-1-4673-2936-1}
+\urldef\tempurl%
+\url{http://dl.acm.org/citation.cfm?id=2487085.2487103}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{{Treude} and {Robillard}}{{Treude} and
+  {Robillard}}{2016}]%
+        {7886920}
+\bibfield{author}{\bibinfo{person}{C. {Treude}} {and} \bibinfo{person}{M.~P.
+  {Robillard}}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Augmenting API Documentation with Insights from
+  Stack Overflow}. In \bibinfo{booktitle}{\emph{2016 IEEE/ACM 38th
+  International Conference on Software Engineering (ICSE)}}.
+  \bibinfo{pages}{392--403}.
+\newblock
+\showISSN{1558-1225}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/2884781.2884800}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{{Vasilescu}, {Filkov}, and
+  {Serebrenik}}{{Vasilescu} et~al\mbox{.}}{2013}]%
+        {6693332}
+\bibfield{author}{\bibinfo{person}{B. {Vasilescu}}, \bibinfo{person}{V.
+  {Filkov}}, {and} \bibinfo{person}{A. {Serebrenik}}.}
+  \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{StackOverflow and GitHub: Associations between
+  Software Development and Crowdsourced Knowledge}. In
+  \bibinfo{booktitle}{\emph{2013 International Conference on Social
+  Computing}}. \bibinfo{pages}{188--195}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1109/SocialCom.2013.35}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Yang, Hussain, and Lopes}{Yang
+  et~al\mbox{.}}{2016}]%
+        {Yang:2016:QUC:2901739.2901767}
+\bibfield{author}{\bibinfo{person}{Di Yang}, \bibinfo{person}{Aftab Hussain},
+  {and} \bibinfo{person}{Cristina~Videira Lopes}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{From Query to Usable Code: An Analysis of Stack
+  Overflow Code Snippets}. In \bibinfo{booktitle}{\emph{Proceedings of the 13th
+  International Conference on Mining Software Repositories}}
+  \emph{(\bibinfo{series}{MSR '16})}. \bibinfo{publisher}{ACM},
+  \bibinfo{address}{New York, NY, USA}, \bibinfo{pages}{391--402}.
+\newblock
+\showISBNx{978-1-4503-4186-8}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/2901739.2901767}
+\showDOI{\tempurl}
+
+
+\end{thebibliography}

@@ -1,0 +1,62 @@
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: proposal.aux
+The style file: ACM-Reference-Format.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: sample.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--no number and no volume in Baltes2018
+Warning--page numbers missing in both pages and numpages fields in Baltes2018
+Warning--empty publisher in 7958574
+Warning--empty address in 7958574
+Warning--empty publisher in 7886920
+Warning--empty address in 7886920
+Warning--empty publisher in 6693332
+Warning--empty address in 6693332
+You've used 11 entries,
+            5719 wiz_defined-function locations,
+            1398 strings with 18031 characters,
+and the built_in function-call counts, 14492 in all, are:
+= -- 1677
+> -- 522
+< -- 0
++ -- 173
+- -- 168
+* -- 1095
+:= -- 1429
+add.period$ -- 55
+call.type$ -- 11
+change.case$ -- 82
+chr.to.int$ -- 11
+cite$ -- 19
+duplicate$ -- 1322
+empty$ -- 910
+format.name$ -- 212
+if$ -- 3402
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 53
+newline$ -- 164
+num.names$ -- 88
+pop$ -- 470
+preamble$ -- 1
+purify$ -- 181
+quote$ -- 0
+skip$ -- 485
+stack$ -- 0
+substring$ -- 1137
+swap$ -- 154
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 302
+warning$ -- 8
+while$ -- 79
+width$ -- 0
+write$ -- 279
+(There were 8 warnings)

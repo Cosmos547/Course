@@ -1,0 +1,131 @@
+%
+% The first command in your LaTeX source must be the \documentclass command.
+\documentclass[sigconf]{acmart}
+
+\sloppy
+
+
+% Disable the extra information at the foot at first page for better viewing experience for a normal document.
+\settopmatter{printacmref=false} % Removes citation information below abstract
+\renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference information in first column
+\pagestyle{plain} % removes running headers
+
+%
+% defining the \BibTeX command - from Oren Patashnik's original BibTeX documentation.
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08emT\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\begin{document}
+
+\title{Project Proposal: \\ Study the knowledge flow to Stack Overflow and from Stack Overflow to GitHub}
+
+\author{Wenhan Zhu (Cosmos)}
+\email{w65zhu@uwaterloo.ca}
+\affiliation{%
+  \institution{University of Waterloo}
+  \city{Waterloo}
+  \country{Canada}
+}
+
+% The abstract is a short summary of the work to be presented in the article.
+\begin{abstract}
+
+{\it Stack Overflow} is the most popular Q\&A website that covers content about programming. It is considered to be consisted of large amount of public knowledge. Many answers from StackOverflow has been used in projects on {\it GitHub} and many of the answers originates from other places. It is important that we understand how knowledge transfer into {\it Stack Overflow} and how other places such as {\it GitHub} uses information from {\it Stack Overflow}.
+
+\end{abstract}
+
+\keywords{{\it Stack Overflow}, {\it GitHub}}
+
+\maketitle
+
+\section{Introduction}
+
+{\it Stack Overflow} since it's introduction in 2011 has became the largest Q\&A website that focuses on programming. It has been considered to have a large amount of public knowledge and extracting information and understanding {\it Stack Overflow} has been quite popular in the Software Engineering community. There has been numerous studies on {\it Stack Overflow}, people try to understand how it works and predict quality answers. Recently, there has been a trend to extract {\it Stack Overflow} knowledge to help developers. \cite{Ponzanelli:2014:MST:2597073.2597077} Recently, a new database {\it SOTorrent} based on the official {\it StackOverflow} datadump has been created.\cite{Baltes:2018:SRA:3196398.3196430} 
+
+{\it GitHub} is the largest code sharing website that hosts {\it git} repositories. There are many code segments on {\it GitHub} that references from {\it Stack Overflow}. Previous studies has shown that code reuse on {\it GitHub} from {\it Stack Overflow} could cause security issues. \cite{7958574} 
+
+The goal of this study is to learn more about how knowledge gets shared to {\it Stack Overflow} and how it then gets used on {\it GitHub} projects. 
+
+\section{Motivation}
+
+{\it Stack Overflow} is very popular among developers, study has shown that code reuse from {\it Stack Overflow} is very common. However, not much has been studied on this topic. The flow of the information and its evolution throughout the process could help us understand better how public knowledge is shared and evolved during software development.
+
+{\it Stack Overflow} dumps its data into a database in schedule. The database contain meta information about posts. {\it SOTorrent} is a recent database that's based of the official data dump. It adds more information about links referenced on {\it Stack Overflow} and {\it GitHub} references to {\it Stack Overflow}. With this information we could trace the information flow on {\it StackOverflow}.
+
+\section{Dataset}
+
+There are 3 major resources that would be used by this project. The first is the before mentioned {\it SOTorrent}. {\it SOTorrent} is a database build on top of the official {\it Stack Overflow} data dump. The additional tables in {\it SOTorrent} is a classified code/text block relationship between updates of posts. And information about references in {\it Stack Overflow} and {\it GitHub} references to {\it Stack Overflow}.
+
+The database is composed of {\it CSV, XML} files that contain information about {\it Stack Overflow} posts content and meta data. {\it Stack Overflow} as an Q\&A website has questions and answers, they are all considered posts. They are differentiated in the dataset by their post type. Each post can be upvoted or downvoted by users. The voting information also exists in the dataset. 
+
+The other major dataset will be the {\it GitHub} dataset. There are two main choices, {\it GHTorrent} and the {\it Google github\_repos} dataset. At the moment, there needs to be more investigation into the dataset to determine which one is more suitable for the purpose of this study.
+
+The other resource will be a code clone detection tool that supports detecting the changes during the clone. Since the project will evaluate how information from {\it Stack Overflow} is used on {\it GitHub}, it is desired to have a way to identify the usage and check the differences if there are any. 
+
+
+\section{Research Questions}
+
+I would like to investigate in the following research questions:
+
+\begin{enumerate}
+	\item RQ1: What does {\it Stack Overflow} information come from?
+	\item RQ2: How are {\it Stack Overflow} code used on {\it GitHub}?
+	\item RQ3: Are {\it Stack Overflow} code modified when introducing to {\it GitHub}?
+	\item RQ4: Does {\it Stack Overflow} code evolve after introduction to {\it GitHub}?
+	\item RQ5: How does {\it Stack Overflow} code on {\it GitHub} co-evolve together?
+\end{enumerate}
+
+\subsection{Approaches}
+
+RQ1: What does {\it Stack Overflow} information come from?
+
+To tackle this problem, my current plan is to extract the first and second level domains from the reference dataset and determine the type of the website. The answer would ideally be some sources from websites and its types such as forums, papers or course notes.
+
+RQ2: How are {\it Stack Overflow} code used on {\it GitHub}?
+
+The usage of {\it Stack Overflow} code on {\it GitHub} has been studies before. {\it Baltes et al.} looked at how the top 10 most reference {\it Java} posts on {\it Stack Overflow} are used on {\it GitHub}. \cite{Baltes2018}  However, none of them looked at the depth of the question. I would like to look at the question at another direction. The goal is to find out what kind of repos uses {\it Stack Overflow} code, are they all course projects by students or its equally distributed among all repositories. 
+
+RQ3: Are {\it Stack Overflow} code modified when introducing to {\it GitHub}?
+
+It is often needed to modify the code when reusing code. Previous study suggests that code snippets on {\it Stack Overflow} is not always reusable. \cite{Yang:2016:QUC:2901739.2901767} The goal of this question is to have a better understanding of code reuse on {\it GitHub} from {\it Stack Overflow}. The approach is to have a code clone tool to look at the 2 code segments and determine are there any changes. After this, we could have an overview of how many code are directly copied and how many are modified.
+
+RQ4: Does {\it Stack Overflow} code evolve after introduction to {\it GitHub}?
+
+Code evolves over time. By looking at this problem, we can see how code evolves after reused from {\it Stack Overflow} and provides information for the next research question. I would like to approach this question by looking at commits updates regarding the lines of code reused from {\it Stack Overflow}.
+
+RQ5: How does {\it Stack Overflow} code reused on {\it GitHub} co-evolve together.
+
+Previous studies have shown that code snippets on {\it Stack Overflow} are not very reliable in terms of security issues. \cite{7958574} When developers updates the insecure code segments, do they go back to the original {\it Stack Overflow} posts provide the information? These are questions that I would like to explore.
+
+\section{Related Research}
+
+Since {\it Stack Overflow}'s introduction, it has attracted many researchers to work on the subject. Some research wants to understand the model of {\it Stack Overflow} \cite{Barua2014} and why it works with its gamification. \cite{Cavusoglu:2015:GMV:2685553.2698999} Interaction between {\it Stack Overflow} and other platform has also been looked at. {\it Vasilescu et al.} looked into common users between {\it Stack Overflow} and {\it GitHub}. They discovered that novice and experienced developer from {\it GitHub} have different patterns of activitiy on {\it Stack Overflow}. \cite{6693332}
+
+There has also been research done to study how to improve {\it Stack Overflow}. {\it Duijn et al.} looked into prediction the quality of questions by looking at how many answers the question attracted. \cite{Duijn:2015:QQN:2820518.2820574} Previous study has shown that the number of answers of a question is highly correlated to the number of upvotes. Therefore, {\it Dujin et al.} decided to use 2 answers (the mean of answers to {\it Stack Overflow} posts) as a line for quality questions. {\it Saha et al.} created a model to better predict tags for {\it Stack Overflow} questions. \cite{Saha:2013:DMA:2487085.2487103} 
+
+Researchers also use {\it Stack Overflow} data to improve the development process of developers. {\it Ponzanelli et al.} tried to mine {\it Stack Overflow} for better IDE suggestions. \cite{Ponzanelli:2014:MST:2597073.2597077}
+
+Mining {\it Stack Overflow} has been really popular in recent years. The public knowledge from {\it Stack Overflow} is very rich. {\it Treude et al.} mined information from {\it Stack Overflow} to augment API documentation. \cite{7886920} 
+
+\section{Vulnerabilities}
+
+\subsection{Threats to Validity}
+
+Both the reference to and from {\it Stack Overflow} in {\it SOTorrent} are extracted by looking at {\it HTML} links. So there could be referenced information but not present in the dataset. Also not every code reuse is referenced, for code reuse from {\it Stack Overflow} to {\it GitHub} we could look at site wise code clone detection but the scale will be enormous and unlikely to be possible due to the size of the corpus. There won't be any effective way off my mind how we would detect unreferenced sources to {\it Stack Overflow}.
+
+The source clone tool that is landed on could lead to problems. So I'll try my best to find the tool that serves the purpose will.
+
+\subsection{Potential Problems}
+
+In this case, the source code is required from {\it GitHub}. Due to the API limits of {\it GitHub} it's unsure whether acquiring the source code will be smooth. 
+
+As a novice to databased and previous problems I've encountered with them. Having the dataset setup could also be more effort than expected. 
+
+Having not used a source clone tool before, experimenting and setting up could have problems.
+
+Time could also be a problem due to the scale of the project. However, I would like to answer most of the questions.
+
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{sample}
+
+\end{document}
